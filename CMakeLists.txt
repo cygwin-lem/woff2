@@ -1,3 +1,5 @@
+set(WOFF2_CYGWIN_ABI 1)
+
 # Copyright 2017 Igalia S.L. All Rights Reserved.
 #
 # Distributed under MIT license.
@@ -98,7 +100,7 @@ target_link_libraries(woff2_info woff2common)
 
 foreach(lib woff2common woff2dec woff2enc)
   set_target_properties(${lib} PROPERTIES
-    SOVERSION ${WOFF2_VERSION}
+    SOVERSION ${WOFF2_CYGWIN_ABI}
     VERSION ${WOFF2_VERSION}
     POSITION_INDEPENDENT_CODE TRUE)
 endforeach()
