@@ -262,12 +262,12 @@ generate_pkg_config ("${CMAKE_CURRENT_BINARY_DIR}/libwoff2enc.pc"
   LIBRARIES woff2enc)
 
 # Installation
-if (NOT BUILD_SHARED_LIBS)
+#if (NOT BUILD_SHARED_LIBS)
   install(
     TARGETS woff2_decompress woff2_compress woff2_info
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
   )
-endif()
+#endif()
 
 install(
   TARGETS woff2common woff2dec woff2enc
